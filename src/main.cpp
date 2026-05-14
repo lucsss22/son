@@ -6,8 +6,8 @@
 
 Analog meuMicrofone(35);
 Tela minhaTela(128, 64, 22, 21);
-// Servidor meuServidor("POCO X6 pro 5g", "12345679");
-Servidor meuServidor("Wokwi-GUEST", "");
+Servidor meuServidor("POCO X6 Pro 5G", "12345679");
+// Servidor meuServidor("Wokwi-GUEST", "");
 int som = 0;
 
 
