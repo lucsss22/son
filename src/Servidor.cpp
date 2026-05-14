@@ -29,11 +29,14 @@ void Servidor::IniciarServidor(int &valorRuido) {
     server.on("/", [this]() {
        enviarArquivo("/index.html", "text/html");
     });
-    server.on("/", [this]() {
+    server.on("/style.css", [this]() {
        enviarArquivo("/style.css", "text/css");
     });
-    server.on("/", [this]() {
+    server.on("/script.js", [this]() {
        enviarArquivo("/script.js", "application/javascript");
+    });
+    server.on("/ruido", [&valorRuido, this]() {
+        server.send(200, "text/plain", String(valorRuido));
     });
 
     server.begin();

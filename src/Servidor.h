@@ -1,7 +1,7 @@
 #ifndef SERVIDOR_H
 #define SERVIDOR_H
 
-#u]include <LittleFS.h>
+#include <LittleFS.h>
 #include <WebServer.h>
 
 class Servidor
@@ -21,7 +21,7 @@ class Servidor
         void IniciarServidor(int &valorRuido);
 
         void enviarArquivo(String path , String contentType);
-        c:\xampp\htdocs\pasta\HTDOCS\index.html
+
         void AtenderClientes();
         
 };
