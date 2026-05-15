@@ -21,27 +21,60 @@ h1 {
     font-size: 2.5em;
 }
 
-/* O cartão (card) que guarda o valor do sensor */
 #painel {
     background-color: #2d2d2d;
-    padding: 40px;
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Sombra 3D */
+    padding: 20px; /* Era 40px, reduzimos pela metade */
+    border-radius: 15px;
     text-align: center;
+    max-width: 300px; /* Limita a largura do painel */
 }
 
-/* Texto dentro do painel */
 #painel p {
-    font-size: 1.5em;
-    margin: 0;
-    color: #aaaaaa;
+    font-size: 1.1em; /* Era 1.5em */
 }
 
-/* O número em si (o span que o JavaScript atualiza) */
 #valor_som {
-    font-size: 3em;
-    font-weight: bold;
-    color: #ff9800; /* Laranja para destacar o dB */
-    display: block; /* Coloca na linha de baixo */
-    margin-top: 10px;
+    font-size: 2em; /* Era 3em */
+    color: #ff9800;
+}
+
+/* A "moldura" que esconde o que está fora da tela */
+.janela {
+    width: 100%;
+    overflow: hidden; /* Esconde as abas que não estão ativas */
+    border: 2px solid #4CAF50; /* Apenas para visualizarmos a área */
+}
+
+.trilho {
+    display: flex;
+    width: 300%; /* 3 abas de 100% cada */
+    transition: transform 0.5s ease-in-out; /* Aqui acontece a mágica do slide! */
+}
+
+
+.aba {
+    width: 100%;
+    flex-shrink: 0;
+    min-height: 400px; /* Altura mínima para as abas */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tamanho específico para o Gráfico */
+#grafico {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+}
+
+/* Tamanho específico para o Mapa */
+#mapa {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    background-color: #333; /* Fundo cinza enquanto o mapa não carrega */
+    border-radius: 10px;
 }

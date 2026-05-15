@@ -36,7 +36,7 @@ void Servidor::IniciarServidor(int &valorRuido) {
        enviarArquivo("/script.js", "application/javascript");
     });
     server.on("/ruido", [&valorRuido, this]() {
-        server.send(200, "text/plain", String(valorRuido));
+    server.send(200, "text/plain", String(valorRuido));
     });
 
     server.begin();

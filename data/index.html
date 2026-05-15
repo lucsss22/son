@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Acustico</title>
     <link rel="stylesheet" href="style.css">
-</head>
+</head>>
 <body>
     <h1>Dashboard Acustico</h1>
 
-    <div id="painel">
-        <p>Nivel do som: <span id="valor_som">--</span>dB</p>
-    </div>
+    <div id="Menu">
+        <button onclick="irParaAba(0)">Painel</button>
+        <button onclick="irParaAba(1)">Grafico</button>
+        <button onclick="irParaAba(2)">Mapa</button>
+        
 
-    <div id="mapa"></div>
+    </div>
+    
+   
+    <div class="janela">
+        <div class="trilho" id="trilho">
+            <section class="aba">
+                <div id="painel">
+                    <p>Nivel do som: <span id="valor_som">--</span>dB</p>
+                </div>
+            </section>
+
+
+            <section class="aba">
+                <div id="grafico">
+                    <canvas id="grafico_som" ></canvas>
+                </div>
+            </section>
+
+            <section class="aba">
+                <div id="mapa" style="height: 400px;"></div>
+            </section>
+        </div>
+    </div>
+   
+
 
 
 
