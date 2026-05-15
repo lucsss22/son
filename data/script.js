@@ -1,6 +1,6 @@
 const trilho = document.getElementById("trilho");
 
-const ctx = document.getElementById('grafico').getContext('2d');
+const ctx = document.getElementById('grafico_som').getContext('2d');
 const chartSom = new Chart(ctx, {
     type: 'line',
     data: {

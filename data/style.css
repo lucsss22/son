@@ -53,7 +53,7 @@ h1 {
 
 
 .aba {
-    width: 100%;
+    width: 33.33%;
     flex-shrink: 0;
     min-height: 400px; /* Altura mínima para as abas */
     padding: 20px;
